@@ -1,6 +1,7 @@
 pipeline {
   agent any
   environment { APP_NAME = 'JenkinsDemo' }
+  tools { maven 'Maven3' }
 
   stages {
     stage('Build')  { steps { bat 'mvn -B -DskipTests clean package' } }
