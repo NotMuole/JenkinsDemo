@@ -3,8 +3,8 @@ pipeline {
   environment { APP_NAME = 'JenkinsDemo' }
 
   stages {
-    stage('Build')  { steps { sh 'mvn -B -DskipTests clean package' } }
-    stage('Test')   { steps { sh 'mvn -B test' } }
+    stage('Build')  { steps { bat 'mvn -B -DskipTests clean package' } }
+    stage('Test')   { steps { bat 'mvn -B test' } }
     stage('Deploy') { steps { echo "Deploying ${APP_NAME} build #${env.BUILD_NUMBER}" } }
   }
 
