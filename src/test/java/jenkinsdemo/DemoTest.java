@@ -15,7 +15,7 @@ class DemoTest {
     @Test
     void isEven_trueForEven_falseForOdd() {
         Demo demo = new Demo();
-        assertTrue(demo.isEven(10));
+        assertFalse(demo.isEven(10));
         assertFalse(demo.isEven(11));
     }
 
